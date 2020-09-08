@@ -1,0 +1,45 @@
+{
+  "name": "link-app",
+  "version": "1.0.0",
+  "description": "Articles link manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:coverage": "jest --verbose --coverage",
+    "test:watch": "jest --verbose --watchAll",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "dev": "nodemon ./index.js"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaquinfherranz/link-app.git"
+  },
+  "keywords": [
+    "link",
+    "article"
+  ],
+  "author": "Joaquín Fernández Herranz",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/joaquinfherranz/link-app/issues"
+  },
+  "homepage": "https://github.com/joaquinfherranz/link-app#readme",
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  }
+}
