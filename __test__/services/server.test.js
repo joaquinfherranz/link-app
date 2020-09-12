@@ -13,6 +13,18 @@ describe('GET /api/v1 endpoint', () => {
   })
 })
 
+describe('GET /api/v1/news endpoint', () => {
+  test('Should respond a json with news data', () => {
+    request(app)
+      .get('/api/v1/news')
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .then(({ body }) => {
+        //@TODO: validate content
+      })
+  })
+})
+
 describe('GET / endpoint', () => {
   test('Should respond an html file that contains Hello developers!', async () => {
     request(app)
