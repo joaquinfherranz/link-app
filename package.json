@@ -49,6 +49,7 @@
     "express-http-to-https": "^1.1.4",
     "got": "^11.6.2",
     "jsdom": "^16.4.0",
+    "lowdb": "^1.0.0",
     "metascraper": "^5.14.8",
     "metascraper-author": "^5.14.7",
     "metascraper-clearbit": "^5.14.9",
