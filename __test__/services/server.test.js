@@ -20,7 +20,7 @@ describe('GET /api/v1/news endpoint', () => {
       .expect('Content-Type', /json/)
       .expect(200)
       .then(({ body }) => {
-        //@TODO: validate content
+        // @TODO: validate content
       })
   })
 })
