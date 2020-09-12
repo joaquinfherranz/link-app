@@ -48,6 +48,16 @@
     "express": "^4.17.1",
     "express-http-to-https": "^1.1.4",
     "got": "^11.6.2",
-    "jsdom": "^16.4.0"
+    "jsdom": "^16.4.0",
+    "metascraper": "^5.14.8",
+    "metascraper-author": "^5.14.7",
+    "metascraper-clearbit": "^5.14.9",
+    "metascraper-date": "^5.14.7",
+    "metascraper-description": "^5.14.7",
+    "metascraper-image": "^5.14.7",
+    "metascraper-logo": "^5.14.7",
+    "metascraper-publisher": "^5.14.7",
+    "metascraper-title": "^5.14.7",
+    "metascraper-url": "^5.14.7"
   }
 }
