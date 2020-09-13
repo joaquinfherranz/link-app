@@ -2,6 +2,8 @@ const news = require('./samples/news.json')
 const { readFileSync } = require('fs')
 const { join } = require('path')
 
+const readSourceSampleFile = (filename) => readFileSync(join(__dirname, './sources_samples/' + filename), 'utf8')
+
 module.exports = {
   news: {
     allNews: news,
@@ -9,6 +11,7 @@ module.exports = {
     validId: news[0].id
   },
   sources: {
-    freecodecamp: readFileSync(join(__dirname, './sources_samples/freecodecamp.html'), 'utf8')
+    freecodecamp: readSourceSampleFile('freecodecamp.html'),
+    javascriptkicks: readSourceSampleFile('javascriptkicks.html')
   }
 }
