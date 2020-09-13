@@ -1,26 +1,24 @@
 const request = require('supertest')
 const app = require('../../services/server')
+const { resetDB, populateDB } = require('../helpers')
+const store = require('../../services/store')
 
-describe('GET /api/v1 endpoint', () => {
-  test('Should respond a json with a Hello World!', () => {
-    request(app)
-      .get('/api/v1')
-      .expect('Content-Type', /json/)
-      .expect(200)
-      .then(({ body }) => {
-        expect(body.message).toBe('Hello World!')
-      })
-  })
+beforeAll(() => {
+  resetDB()
+  populateDB()
 })
 
+afterAll(resetDB)
+
 describe('GET /api/v1/news endpoint', () => {
-  test('Should respond a json with news data', () => {
+  test('Should respond with news data', () => {
     request(app)
       .get('/api/v1/news')
       .expect('Content-Type', /json/)
       .expect(200)
       .then(({ body }) => {
-        // @TODO: validate content
+        const storedData = store.news.fetchAll()
+        expect(body).toStrictEqual(storedData)
       })
   })
 })
