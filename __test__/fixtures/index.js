@@ -1,4 +1,5 @@
 const news = require('./samples/news.json')
+const freecodecampScraping = require('./scraping_samples/freecodecamp.json')
 const { readFileSync } = require('fs')
 const { join } = require('path')
 
@@ -13,5 +14,8 @@ module.exports = {
   sources: {
     freecodecamp: readSourceSampleFile('freecodecamp.html'),
     javascriptkicks: readSourceSampleFile('javascriptkicks.html')
+  },
+  scraping: {
+    freecodecamp: freecodecampScraping
   }
 }
