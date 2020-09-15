@@ -1,4 +1,8 @@
-const { freecodecamp: freecodecampDownloader } = require('../downloaders')
+const {
+  freecodecamp: freecodecampDownloader,
+  javascriptkicks: javascriptkicksDownloader
+} = require('../downloaders')
+
 const { JSDOM } = require('jsdom')
 
 const scraping = ({ html, selector, host }) => {
@@ -15,6 +19,14 @@ const freecodecamp = async () => {
   return scraping({ html, selector, host })
 }
 
+const javascriptkicks = async () => {
+  const html = await javascriptkicksDownloader()
+  const selector = 'h2.story-title > a[href]'
+  const host = 'https://javascriptkicks.com'
+  return scraping({ html, selector, host })
+}
+
 module.exports = {
-  freecodecamp
+  freecodecamp,
+  javascriptkicks
 }
