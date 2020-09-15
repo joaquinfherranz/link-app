@@ -8,8 +8,6 @@ const {
 describe('Scrapers behaviour', () => {
   test('freecodecamp scraper', async () => {
     const urls = await freecodecamp()
-    expect(urls).toStrictEqual([] || freecodecampFixture.urls)
-    // @TODO: Validate scraping result
-    // expect(urls).toStrictEqual(freecodecampFixture.urls)
+    expect(urls).toStrictEqual(freecodecampFixture.urls)
   })
 })
