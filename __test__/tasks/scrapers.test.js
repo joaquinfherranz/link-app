@@ -1,8 +1,9 @@
-const { freecodecamp, javascriptkicks } = require('../../tasks/scrapers')
+const { freecodecamp, javascriptkicks, news } = require('../../tasks/scrapers')
 const {
   scraping: {
     freecodecamp: { urls: freecodecampFixture },
-    javascriptkicks: { urls: javascriptkicksFixture }
+    javascriptkicks: { urls: javascriptkicksFixture },
+    repetedUrl
   }
 } = require('../fixtures')
 
@@ -18,8 +19,15 @@ describe('Scrapers behaviour', () => {
   })
 
   test('news scraper', async () => {
-    // @TODO: Validate that all freecodecamp urls are included in news urls
-    // @TODO: Validate that all javascriptkicks urls are included in news urls
-    // @TODO: Validate that there are no repeted urls
+    const freecodecampUrls = await freecodecamp()
+    const javascriptkicksUrls = await javascriptkicks()
+    const urls = await news()
+
+    // all freecodecamp urls are included in news urls
+    expect(urls).toEqual(expect.arrayContaining(freecodecampUrls))
+    // all javascriptkicks urls are included in news urls
+    expect(urls).toEqual(expect.arrayContaining(javascriptkicksUrls))
+    // there are no repeted urls
+    expect(urls.filter(url => url === repetedUrl).length).toStrictEqual(1)
   })
 })

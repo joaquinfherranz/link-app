@@ -18,6 +18,7 @@ module.exports = {
   },
   scraping: {
     freecodecamp: freecodecampScraping,
-    javascriptkicks: javascriptkicksScraping
+    javascriptkicks: javascriptkicksScraping,
+    repetedUrl: freecodecampScraping.urls.filter(url => javascriptkicksScraping.urls.includes(url))[0]
   }
 }

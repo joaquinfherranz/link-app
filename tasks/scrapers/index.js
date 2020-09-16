@@ -26,7 +26,13 @@ const javascriptkicks = async () => {
   return scraping({ html, selector, host })
 }
 
+const news = async () => {
+  const urls = await Promise.all([freecodecamp(), javascriptkicks()])
+  return [...new Set(urls.flat())]
+}
+
 module.exports = {
   freecodecamp,
-  javascriptkicks
+  javascriptkicks,
+  news
 }
