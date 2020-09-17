@@ -1,0 +1,10 @@
+{
+  "author": "Jake Archibald",
+  "date": "2013-12-16T11:00:00.000Z",
+  "description": "Promises simplify deferred and asynchronous computations. A promise represents an operation that hasn’t completed yet.",
+  "image": "https://webdev.imgix.net/images/social.png?auto=format&fit=max&w=1200",
+  "logo": "https://logo.clearbit.com/web.dev",
+  "publisher": "web.dev",
+  "title": "JavaScript Promises: An introduction",
+  "url": "https://web.dev/promises/"
+}
