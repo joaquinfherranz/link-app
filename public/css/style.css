@@ -1,0 +1,150 @@
+html,
+body {
+  background-image:
+    radial-gradient(#0049ffaa 1px, #fdfdfd 1px),
+    radial-gradient(#0049ffaa 1px, #fdfdfd 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body > div {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+} 
+main {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+  height: 100vh;
+  width: 100%;
+}
+@media (min-width: 520px) {
+  main {
+    height: 90vh;
+    width: 520px;
+  }
+}
+
+main > header {
+  align-items: center;
+  background: #ffffffaa;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #eee;
+  height: 49px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+section {
+  flex: 1;
+}
+
+
+h1 {
+  font-size: 21px;
+  font-weight: 800;
+  padding-left: 15px;
+  color:rgba(0,0,0,.80)
+}
+
+h2 {
+  color:rgba(0,0,0,.70);
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+p {
+  color: rgba(0,0,0,.50);
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+article {
+  border-bottom: 1px solid #eee;
+  
+  flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 20px 50px;
+    background: #fff 50%;
+    background-size: cover;
+    margin-bottom: 10px;
+  margin-bottom: 20px;  
+}
+
+
+article > a {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+article > a > img {
+  max-width: 100%;
+  height: 200px
+}
+
+article > div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+article > div > div {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+div.description {
+  margin-bottom: 4px;
+}
+
+article footer {
+  display: flex;
+    align-items: flex-end;
+    padding: 0 0 0 4px;
+}
+
+.footer {
+  display: flex;
+    align-items: flex-end;
+    padding: 0 0 0 4px;
+}
+
+.metadata {
+  flex-shrink: 0;
+  color: rgba(0,0,0,.70);
+  font-size: 1.2rem;
+  line-height: 25px;
+  font-weight: 500;
+  letter-spacing: .5px;
+  font-size: 12px
+}
+
+.author {
+  text-transform: uppercase;
+}
+
+.timeago {
+  margin-left: 20px;
+}
+
+.publisher {
+  margin-left: 20px;
+}
