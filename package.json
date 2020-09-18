@@ -16,7 +16,8 @@
       "jest"
     ],
     "ignore": [
-      "/public/js/*.js"
+      "/public/js/*.js",
+      "/WIP/*.js"
     ]
   },
   "repository": {
