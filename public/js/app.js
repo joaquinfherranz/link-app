@@ -8,7 +8,9 @@ const renderArticle = ({ metadata: { url, image, title, description, author, dat
     <div>
       <div>
         <header>
-          <h2>${title}</h2>
+          <a href="${url}">
+            <h2>${title}</h2>
+          </a>
         </header>
       </div>
       <div class="description">

@@ -48,6 +48,10 @@ section {
   flex: 1;
 }
 
+header > a {
+  cursor: pointer;
+  text-decoration: none;
+}
 
 h1 {
   font-size: 21px;
@@ -102,6 +106,7 @@ article > div {
   flex-direction: column;
   justify-content: flex-start;
   margin-bottom: 5px;
+  margin-top: 10px
 }
 
 article > div > div {
