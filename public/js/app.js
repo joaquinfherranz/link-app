@@ -1,6 +1,11 @@
 
 const renderArticle = ({ metadata: { url, image, title, description, author, date, publisher } }) => {
   //const timeago = '18 hours ago'
+  
+  const descriptionDOM = description ? `<div class="description"><p>${description}</p></div>`: ''
+  const authorDOM = author ? `<span class="metadata author">✍️ ${author}</span>`: ''
+  const dateDOM = date ? `<span class="metadata timeago">🕐 ${date}</span>`: ''
+  const publisherDOM = publisher ? `<div class="footer"><span class="metadata publisher">${publisher}</span></div>`: ''
   const markup = `
     <a href="${url}">
       <img src="${image}">
@@ -13,16 +18,11 @@ const renderArticle = ({ metadata: { url, image, title, description, author, dat
           </a>
         </header>
       </div>
-      <div class="description">
-        <p>${description}</p>
-      </div>
+      ${descriptionDOM}
       <div class="footer">
-        <span class="metadata author">✍️ ${author}</span>
-        <span class="metadata timeago">🕐 ${date}</span>              
+        ${authorDOM}${dateDOM}             
       </div>  
-      <div class="footer">
-        <span class="metadata publisher">${publisher}</span>    
-      </div>   
+      ${publisherDOM}
     </div>
     `
   const sectionDOM = document.querySelector('main > section')
