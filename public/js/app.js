@@ -3,14 +3,13 @@ import getTimeAgo from './timeago.js'
 const renderArticle = ({ metadata: { url, image, title, description, author, date, publisher } }) => {
   const mseconds = date ? (new Date(date)).getTime() : null
   
+  const imageDOM = image ? `<a href="${url}"><img src="${image}"></a>` : ''
   const descriptionDOM = description ? `<div class="description"><p>${description}</p></div>`: ''
   const authorDOM = author ? `<span class="metadata author">✍️ ${author}</span>`: ''
   const dateDOM = date ? `<span class="metadata timeago">🕐 ${getTimeAgo(mseconds)}</span>`: ''
   const publisherDOM = publisher ? `<div class="footer"><span class="metadata publisher">${publisher}</span></div>`: ''
   const markup = `
-    <a href="${url}">
-      <img src="${image}">
-    </a>
+    ${imageDOM}
     <div>
       <div>
         <header>
