@@ -30,7 +30,7 @@ describe('GET / endpoint', () => {
       .expect(200)
       .expect('Content-Type', /html/)
       .then((res) => {
-        expect(res.text).toContain('Hello developers!')
+        expect(res.text).toContain('Link app')
       })
   })
 })
